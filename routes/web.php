@@ -13,12 +13,25 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+
+// Assignment 5 Http methods with database
+
+// Student controller
+
 Route::get('/students', [StudentController::class, 'index']);   // List all students
 Route::post('/students', [StudentController::class, 'store']);  // Create new student
 Route::put('/students/{id}', [StudentController::class, 'update']); // Update student
 Route::delete('/students/{id}', [StudentController::class, 'destroy']); // Delete student
 
+// Teacher controller
 
+Route::get('/teachers', [TeacherController::class, 'index']);
+Route::post('/teachers', [TeacherController::class, 'store']);
+Route::put('/teachers/{id}', [TeacherController::class, 'update']);
+Route::delete('/teachers/{id}', [TeacherController::class, 'destroy']);
+
+
+// Assignment 4 Http methods with arrays
 
 
 // Student controller
